@@ -51,11 +51,6 @@ Simply install the datapack and add an item to the loot table with the following
           "name": "minecraft:goat_horn",
           "functions": [
             {
-              "function": "minecraft:set_name",
-              "entity": "this",
-              "name": "test"
-            },
-            {
               "function": "minecraft:set_attributes",
               "modifiers": [
                 {
