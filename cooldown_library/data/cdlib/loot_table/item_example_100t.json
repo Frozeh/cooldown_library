@@ -1,0 +1,54 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:goat_horn",
+          "functions": [
+            {
+              "function": "minecraft:set_name",
+              "entity": "this",
+              "name": "test"
+            },
+            {
+              "function": "minecraft:set_attributes",
+              "modifiers": [
+                {
+                  "id": "cdlib.id",
+                  "attribute": "minecraft:generic.luck",
+                  "amount": {
+                    "min": -100000,
+                    "max": 100000
+                  },
+                  "operation": "add_value",
+                  "slot": "body"
+                }
+              ]
+            },
+            {
+              "function": "minecraft:toggle_tooltips",
+              "toggles": {
+                "attribute_modifiers": false
+              }
+            },
+            {
+              "function": "set_components",
+              "components": {
+                "custom_data": {
+                  "cdlib": 1
+                },
+                "instrument": {
+                  "use_duration": 100,
+                  "range": 0.01,
+                  "sound_event": "entity.zombie.death"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "player": {
+            "slots": {
+              "weapon.mainhand": {
+                "items": "minecraft:goat_horn"
+              }
+            }
+          },
+          "item": {
+            "items": "minecraft:goat_horn",
+            "predicates": {
+              "minecraft:custom_data": {
+                "cdlib": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "cdlib:mainhand/trigger"
+    }
+  }
+  

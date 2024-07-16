@@ -1,0 +1,47 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:inverted",
+            "term": {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "equipment": {
+                  "mainhand": {
+                    "items": "minecraft:goat_horn"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "slots": {
+                "weapon.offhand": {
+                  "items": "minecraft:goat_horn"
+                }
+              }
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:goat_horn",
+          "predicates": {
+            "minecraft:custom_data": {
+              "cdlib": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "cdlib:offhand/trigger"
+  }
+}
